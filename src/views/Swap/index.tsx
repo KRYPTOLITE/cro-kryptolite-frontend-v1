@@ -442,7 +442,7 @@ export default function Swap() {
             : outputCurrencyId;
 
         fetch(
-          `https://api.etherscan.io/api?module=stats&action=tokensupply&contractaddress=${outCurrency}&apikey=${process.env.GATSBY_BINANCE_API_KEY}`
+          `https://api.cronoscan.com/api?module=stats&action=tokensupply&contractaddress=${outCurrency}&apikey=${process.env.GATSBY_CRONOS_API_KEY}`
         ).then(async (res) => {
           const apiResponse = await res.json();
           const mc = new BigNumber(apiResponse.result)

@@ -7,7 +7,7 @@ const Icon: React.FC<SvgProps> = (props) => {
     <Svg
       height={24}
       width={24}
-      viewBox="0 0 256 417"
+      viewBox="0 0 56 217"
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid"
       {...props}

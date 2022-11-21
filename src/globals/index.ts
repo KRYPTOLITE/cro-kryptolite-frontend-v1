@@ -35,10 +35,23 @@ export const navigationItems: NavigationType[] = [
     options: { target: "_self" },
   },
   {
-    id: 3,
-    title: "Launch Pad",
-    href: "https://kryptolite.rocks/launch-pad",
-    options: { target: "_self" },
+    id: "ui764rj4if83",
+    title: "Tools For Projects",
+    href: "#",
+    children: [
+      {
+        id: "759en8yr3r3",
+        title: "Launch Pad",
+        href: "https://kryptolite.rocks/launch-pad",
+        options: { target: "_self" },
+      },
+      {
+        id: "8ey8ye0r",
+        title: "Widgets",
+        href: "/widgets",
+        options: { target: "_self" },
+      },
+    ],
   },
   {
     id: "7672i86e83",

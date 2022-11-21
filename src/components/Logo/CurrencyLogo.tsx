@@ -5,11 +5,10 @@ import useHttpLocations from "../../hooks/useHttpLocations";
 import { WrappedTokenInfo } from "../../state/types";
 import getTokenLogoURL from "../../utils/getTokenLogoUrl";
 import Logo from "./index";
-import CronosIcon from "../Svg/Icons/Cronos";
+import { StaticImage } from "gatsby-plugin-image";
 
 export default function CurrencyLogo({
   currency,
-  size = "24px",
   style,
 }: {
   currency?: Currency;
@@ -33,7 +32,15 @@ export default function CurrencyLogo({
   }, [currency, uriLocations]);
 
   if (currency === CRO) {
-    return <CronosIcon className="flex-none" width={size} style={style} />;
+    return (
+      <StaticImage
+        className="flex-none"
+        alt=""
+        src="../../images/cronos_logo_small.png"
+        width={24}
+        style={style}
+      />
+    );
   }
 
   return (

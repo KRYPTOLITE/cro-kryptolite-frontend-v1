@@ -23,8 +23,13 @@ const CurrencyInputHeader: React.FC<Props> = ({
   const supportedProjectNetworks = [
     {
       id: "idjief",
-      name: "Binace Smart Chain (Beb20)",
+      name: "Binance Smart Chain (Beb20)",
       projectLink: "https://kryptolite.rocks/swap",
+    },
+    {
+      id: "idjief",
+      name: "Ethereum Network",
+      projectLink: "https://eth.kryptolite.rocks/swap",
     },
   ];
   return (
