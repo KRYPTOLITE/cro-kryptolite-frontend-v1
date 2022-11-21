@@ -1,8 +1,8 @@
 {
-  "name": "eth-krytolite-frontend-v1",
+  "name": "cro-krytolite-frontend-v1",
   "version": "1.0.0",
   "private": true,
-  "description": "eth-krytolite-frontend-v1",
+  "description": "cro-krytolite-frontend-v1",
   "author": "Ttebify",
   "keywords": [
     "gatsby"

@@ -24,9 +24,16 @@ export default function CurrencyLogo({
 
     if (currency instanceof Token) {
       if (currency instanceof WrappedTokenInfo) {
-        return [...uriLocations, getTokenLogoURL(currency.address)];
+        return [
+          ...uriLocations,
+          getTokenLogoURL(currency.address),
+          `/images/tokens/${currency.address}.png`,
+        ];
       }
-      return [getTokenLogoURL(currency.address)];
+      return [
+        getTokenLogoURL(currency.address),
+        `/images/tokens/${currency.address}.png`,
+      ];
     }
     return [];
   }, [currency, uriLocations]);
@@ -38,6 +45,8 @@ export default function CurrencyLogo({
         alt=""
         src="../../images/cronos_logo_small.png"
         width={24}
+        height={24}
+        layout="fixed"
         style={style}
       />
     );

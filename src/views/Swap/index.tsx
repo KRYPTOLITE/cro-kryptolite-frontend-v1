@@ -394,7 +394,7 @@ export default function Swap() {
   }, [account, library]);
 
   const USDTCurrency = useCurrency(
-    "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48"
+    "0x66e428c3f67a68878562e79A0234c1F83c208770"
   );
 
   const { v2Trade: tradeWithUSD } = useDerivedSwapInfo(
@@ -438,13 +438,14 @@ export default function Swap() {
         // Just a hack to replace CRO with weth address
         const outCurrency =
           outputCurrencyId === "CRO"
-            ? "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+            ? "0x5C7F8A570d578ED84E63fdFA7b1eE72dEae1AE23"
             : outputCurrencyId;
 
         fetch(
           `https://api.cronoscan.com/api?module=stats&action=tokensupply&contractaddress=${outCurrency}&apikey=${process.env.GATSBY_CRONOS_API_KEY}`
         ).then(async (res) => {
           const apiResponse = await res.json();
+
           const mc = new BigNumber(apiResponse.result)
             .div(BIG_TEN.pow(currency.decimals))
             .times(formattedPrice);
