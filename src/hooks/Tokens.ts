@@ -118,7 +118,7 @@ export function useIsUserAddedToken(
 // parse a name or symbol from a token response
 const BYTES32_REGEX = /^0x[a-fA-F0-9]{64}$/;
 
-function parseStringOrBytes32(
+export function parseStringOrBytes32(
   str: string | undefined,
   bytes32: string | undefined,
   defaultValue: string

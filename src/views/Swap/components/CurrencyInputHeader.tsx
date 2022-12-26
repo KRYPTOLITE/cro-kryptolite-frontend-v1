@@ -27,7 +27,7 @@ const CurrencyInputHeader: React.FC<Props> = ({
       projectLink: "https://kryptolite.rocks/swap",
     },
     {
-      id: "idjief",
+      id: "74jdt7r784",
       name: "Ethereum Network",
       projectLink: "https://eth.kryptolite.rocks/swap",
     },
@@ -51,6 +51,7 @@ const CurrencyInputHeader: React.FC<Props> = ({
           >
             {supportedProjectNetworks.map((project) => (
               <Link
+                key={project.id}
                 to={project.projectLink}
                 className="p-2 block font-normal text-primary-600 hover:text-primary-800 focus:text-primary-800
                   bg-white focus:outline-none text-sm"

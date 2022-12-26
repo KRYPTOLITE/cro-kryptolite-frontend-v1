@@ -48,7 +48,7 @@ export const navigationItems: NavigationType[] = [
       {
         id: "8ey8ye0r",
         title: "Widgets",
-        href: "/widgets",
+        href: "https://kryptolite.rocks/widgets",
         options: { target: "_self" },
       },
     ],

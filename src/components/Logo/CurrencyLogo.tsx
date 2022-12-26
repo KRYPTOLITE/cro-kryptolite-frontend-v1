@@ -24,16 +24,9 @@ export default function CurrencyLogo({
 
     if (currency instanceof Token) {
       if (currency instanceof WrappedTokenInfo) {
-        return [
-          ...uriLocations,
-          getTokenLogoURL(currency.address),
-          `/images/tokens/${currency.address}.png`,
-        ];
+        return [...uriLocations, ...getTokenLogoURL(currency.address)];
       }
-      return [
-        getTokenLogoURL(currency.address),
-        `/images/tokens/${currency.address}.png`,
-      ];
+      return [...getTokenLogoURL(currency.address)];
     }
     return [];
   }, [currency, uriLocations]);

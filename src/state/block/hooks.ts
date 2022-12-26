@@ -19,7 +19,7 @@ export const usePollBlockNumber = () => {
     },
     {
       refreshInterval: REFRESH_BLOCK_INTERVAL,
-    },
+    }
   );
 
   useSWR(
@@ -29,7 +29,7 @@ export const usePollBlockNumber = () => {
     },
     {
       refreshInterval: FAST_INTERVAL,
-    },
+    }
   );
 
   useSWR(
@@ -39,7 +39,7 @@ export const usePollBlockNumber = () => {
     },
     {
       refreshInterval: SLOW_INTERVAL,
-    },
+    }
   );
 };
 

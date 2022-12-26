@@ -6,10 +6,18 @@ import Button from "./Button";
 import truncateHash from "../../utils/truncateHash";
 import useActiveWeb3React from "../../hooks/useActiveWeb3React";
 import { BsWalletFill } from "react-icons/bs";
+import type { ButtonProps } from "./types";
 
-interface ConnectWalletButtonProps extends React.HTMLAttributes<HTMLButtonElement> {}
+interface ConnectWalletButtonProps
+  extends React.HTMLAttributes<HTMLButtonElement> {
+  buttonVariant?: ButtonProps["variant"];
+}
 
-const ConnectWalletButton = ({ className, ...props }: ConnectWalletButtonProps) => {
+const ConnectWalletButton = ({
+  className,
+  buttonVariant = "outline",
+  ...props
+}: ConnectWalletButtonProps) => {
   const {
     krlWallet: { active, error, retry, isConnecting },
   } = useAppContext();
@@ -36,7 +44,7 @@ const ConnectWalletButton = ({ className, ...props }: ConnectWalletButtonProps) 
       )}
       {!active && !error && (
         <Button
-          variant="outline"
+          variant={buttonVariant}
           disabled={isConnecting}
           onClick={openModal}
           className={cls(
@@ -44,7 +52,7 @@ const ConnectWalletButton = ({ className, ...props }: ConnectWalletButtonProps) 
             {
               "cursor-not-allowed hover:text-opacity-80": isConnecting,
             },
-            className,
+            className
           )}
           {...props}
         >
@@ -52,7 +60,10 @@ const ConnectWalletButton = ({ className, ...props }: ConnectWalletButtonProps) 
         </Button>
       )}
       {!active && error && (
-        <Button className="!text-red-600 w-full text-base px-4 py-2" onClick={retry}>
+        <Button
+          className="!text-red-600 w-full text-base px-4 py-2"
+          onClick={retry}
+        >
           Click to Retry
         </Button>
       )}

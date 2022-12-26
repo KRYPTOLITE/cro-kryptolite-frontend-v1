@@ -54,6 +54,7 @@ import BigNumber from "bignumber.js";
 import CurrencyLogo from "../../components/Logo/CurrencyLogo";
 import { BIG_TEN } from "../../utils/bigNumber";
 import classNames from "classnames";
+import ReferralRewardsTable from "../../components/ReferralRewardsTable";
 
 export default function Swap() {
   const loadedUrlParams = useDefaultsFromURLSearch();
@@ -520,8 +521,8 @@ export default function Swap() {
   const [onPresentTransactionsModal] = useModal(<TokenInfoCard />);
 
   return (
-    <Section padding>
-      <div className="w-full justify-center relative">
+    <Section padding className="max-w-screen-2xl">
+      <div className="w-full flex flex-col gap-10 xl:flex-row xl:gap-0 xl:justify-between relative">
         <div className="flex flex-col items-center md:flex-row gap-10 md:items-stretch md:justify-center">
           <div className="w-[328px] shrink-0  p-3 shadow-md rounded-md border">
             <CurrencyInputHeader
@@ -763,6 +764,9 @@ export default function Swap() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="w-full max-w-lg mx-auto">
+          <ReferralRewardsTable />
         </div>
       </div>
     </Section>

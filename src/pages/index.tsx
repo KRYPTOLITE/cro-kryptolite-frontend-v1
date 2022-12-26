@@ -374,8 +374,8 @@ const servicesList: {
 
 export const Head: HeadFC = () => (
   <SEO
-    title="KRYPTOLITE - the next 100X DeFi gem you don't want to miss"
-    description="KRYPTOLITE - the next 100X DeFi gem you don't want to miss"
+    title="Kryptolite Ethereum Swap"
+    description="The next 100X DeFi gem you don't want to miss"
     image={{ og: previewOgImags, twitter: previewTwitterImags }}
   />
 );

@@ -22,7 +22,7 @@ export interface Result extends ReadonlyArray<any> {
 type MethodArg = string | number | BigNumber;
 type MethodArgs = Array<MethodArg | MethodArg[]>;
 
-type OptionalMethodInputs =
+export type OptionalMethodInputs =
   | Array<MethodArg | MethodArg[] | undefined>
   | undefined;
 
@@ -30,7 +30,7 @@ function isMethodArg(x: unknown): x is MethodArg {
   return ["string", "number"].indexOf(typeof x) !== -1;
 }
 
-function isValidMethodArgs(x: unknown): x is MethodArgs | undefined {
+export function isValidMethodArgs(x: unknown): x is MethodArgs | undefined {
   return (
     x === undefined ||
     (Array.isArray(x) &&
@@ -40,13 +40,13 @@ function isValidMethodArgs(x: unknown): x is MethodArgs | undefined {
   );
 }
 
-interface CallResult {
+export interface CallResult {
   readonly valid: boolean;
   readonly data: string | undefined;
   readonly blockNumber: number | undefined;
 }
 
-const INVALID_RESULT: CallResult = {
+export const INVALID_RESULT: CallResult = {
   valid: false,
   blockNumber: undefined,
   data: undefined,
@@ -123,7 +123,7 @@ function useCallsData(
   );
 }
 
-interface CallState {
+export interface CallState {
   readonly valid: boolean;
   // the result, or undefined if loading or errored/no data
   readonly result: Result | undefined;
@@ -150,7 +150,7 @@ const LOADING_CALL_STATE: CallState = {
   error: false,
 };
 
-function toCallState(
+export function toCallState(
   callResult: CallResult | undefined,
   contractInterface: Interface | undefined,
   fragment: FunctionFragment | undefined,

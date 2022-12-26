@@ -1,8 +1,8 @@
 {
-  "name": "cro-krytolite-frontend-v1",
+  "name": "cro-krytolite-swap-widget-v1",
   "version": "1.0.0",
   "private": true,
-  "description": "cro-krytolite-frontend-v1",
+  "description": "Cronos Kryptolite Swap Widget",
   "author": "Ttebify",
   "keywords": [
     "gatsby"
@@ -52,6 +52,8 @@
     "react-accessible-accordion": "^5.0.0",
     "react-dom": "^18.1.0",
     "react-icons": "^4.4.0",
+    "react-month-picker": "^2.2.1",
+    "react-paginate": "^8.1.4",
     "react-player": "^2.11.0",
     "react-popper": "^2.3.0",
     "react-redux": "^8.0.4",
